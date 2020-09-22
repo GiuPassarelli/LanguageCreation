@@ -54,29 +54,28 @@ CARACTER-PALAVRA = qualquer caracter que não seja aspas duplas
 
 #### Exemplo:
 
-enquanto(a>7){
+    enquanto(a>7){
 
-    a->a+1;
+        a->a+1;
     
-}
-durante a->7*2 ate 40/2{
-
-    se(a>16){
-    
-        b->funcao_soma(a);
-        
     }
+
+    durante a->7*2 ate 40/2{
+
+        se(a>16){
     
-    senao{
-    
-        b->funcao_soma(a+5);
+            b->funcao_soma(a);
         
+        }
+    
+        senao{
+            b->funcao_soma(a+5);
+        }
+    
     }
-    
-}
 
-funcao funcao_soma(numero){
+    funcao funcao_soma(numero){
 
-    retorna(numero+10);
+        retorna(numero+10);
     
-}
+    }
