@@ -52,7 +52,7 @@ PALAVRA = "CARACTER-PALAVRA {CARACTER-PALAVRA}"
 
 CARACTER-PALAVRA = qualquer caracter que não seja aspas duplas
 
-#### Exemplo:
+#### Exemplos:
 
     enquanto(a>7){
         a->a+1;
