@@ -24,7 +24,7 @@ CHAMADA_FUNCAO = IDENTIFICADOR "(" [PARAMETROS] ")"
 
 PARAMETROS = IDENTIFICADOR {"," IDENTIFICADOR}
 
-FUNCAO = "funcao" CHAMADA_FUNCAO "{" {AFIRMACAO} ["retorna" "(" (EXPRESSAO | IDENTIFICADOR) ")"] "}"
+FUNCAO = "funcao" CHAMADA_FUNCAO "{" {AFIRMACAO} ["retorna" "(" (EXPRESSAO | IDENTIFICADOR) ")" ";"] "}"
 
 ### DEFINIÇÃO DE VARIAVEL:
 
@@ -32,11 +32,11 @@ VARIAVEL = IDENTIFICADOR "->" (VALOR | CHAMADA_FUNCAO) ";"
 
 VALOR = EXPRESSAO | PALAVRA
 
-EXPRESSAO = TERMO, {("+" | "-"), TERMO};
+EXPRESSAO = TERMO, {("+" | "-"), TERMO}
 
-TERMO = FATOR, {("*" | "/"), FATOR};
+TERMO = FATOR, {("*" | "/"), FATOR}
 
-FATOR = ("+" | "-") FATOR | "(" EXPRESSAO ")" | NUMERO;
+FATOR = ("+" | "-") FATOR | "(" EXPRESSAO ")" | NUMERO
 
 IDENTIFICADOR = LETRA {LETRA | DIGITO}
 
@@ -51,3 +51,21 @@ DIGITO = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 PALAVRA = "CARACTER-PALAVRA {CARACTER-PALAVRA}"
 
 CARACTER-PALAVRA = qualquer caracter que não seja aspas duplas
+
+#### Exemplos:
+
+enquanto(a>7){
+    a->a+1;
+}
+durante a->7*2 ate 40/2{
+    se(a>16){
+        b->funcao_soma(a);
+    }
+    senao{
+        b->funcao_soma(a+5);
+    }
+}
+
+funcao funcao_soma(numero){
+    retorna(numero+10);
+}
