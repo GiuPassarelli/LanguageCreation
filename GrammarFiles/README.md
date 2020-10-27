@@ -9,8 +9,9 @@
 
 ### Definição de variável:
 
-    > varia -> var1;
-    > varia -> 10 + 6*5;
+    > varia1 -> var1;
+    > varia2 -> 10 + 6*5;
+    > varia3 -> " wkla[j82;82 ";
 
 ### Definição de função:
 
