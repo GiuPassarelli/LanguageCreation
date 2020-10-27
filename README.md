@@ -38,19 +38,11 @@ TERMO = FATOR, {("*" | "/"), FATOR}
 
 FATOR = ("+" | "-") FATOR | "(" EXPRESSAO ")" | NUMERO
 
-IDENTIFICADOR = LETRA {LETRA | DIGITO}
+IDENTIFICADOR = ( a-z | A-Z | _ ), { a-z | A-Z | 0-9 | _ }
 
-LETRA = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W"
-        | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" 
-        | "t" | "u" | "v" | "w" | "x" | "y" | "z" 
+NUMERO = 0-9 {0-9}
 
-NUMERO = DIGITO {DIGITO}
-
-DIGITO = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-
-PALAVRA = "CARACTER-PALAVRA {CARACTER-PALAVRA}"
-
-CARACTER-PALAVRA = qualquer caracter que não seja aspas duplas
+PALAVRA = '"' {qualquer caracter que não seja aspas duplas} '"'
 
 #### Exemplos:
 
