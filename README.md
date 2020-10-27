@@ -6,7 +6,7 @@
 
 ENQUANTO = "enquanto" "(" CONDICAO ")" "{" {AFIRMACAO} "}"
 
-DURANTE = "durante" IDENTIFICADOR -> EXPRESSAO "ate" EXPRESSAO "{" {AFIRMACAO} "}"
+DURANTE = "durante" "(" IDENTIFICADOR -> EXPRESSAO "ate" EXPRESSAO ")" "{" {AFIRMACAO} "}"
 
 ### DEFINIÇÃO DE CONDICIONAL:
 
