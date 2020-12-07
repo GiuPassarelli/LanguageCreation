@@ -15,11 +15,8 @@ int yyerror( char *, ...);
 "*"	                      { return MUL; }
 "/"	                      { return DIV; }
 "=="                      { return EQUAL; }
-"menor que"               { return MENOR; }
-"maior que"               { return MAIOR; }
-"menor igual a"           { return MENOREQ; }
-"maior igual a"           { return MAIOREQ; }
-"dentro de"               { return DENTRO; }
+"menorQue"               { return MENOR; }
+"maiorQue"               { return MAIOR; }
 
 "("                       { return OP; }
 ")"                       { return CP; }
