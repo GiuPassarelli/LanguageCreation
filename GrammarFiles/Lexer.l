@@ -33,7 +33,7 @@ int yyerror( char *, ...);
 "ate"                     { return KEYWORDUNTIL; }
 "funcao"                  { return KEYWORDFUNCTION; }
 "retorna"                 { return KEYWORDRETURN; }
-"emprime"                 { return KEYWORDPRINT; }
+"imprime"                 { return KEYWORDPRINT; }
 
 [a-zA-Z_][a-zA-Z0-9_]*    { return IDENTIFIER; }
 ["][^"]*["]               { return PALAVRA; }

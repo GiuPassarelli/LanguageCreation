@@ -38,7 +38,7 @@ condicao: exp
     | exp op_condicional exp
     ;
 
-emprime: KEYWORDPRINT OP exp CP
+imprime: KEYWORDPRINT OP exp CP
     | KEYWORDPRINT OP IDENTIFIER CP
 
 afirmacoes: afirmacao
@@ -50,7 +50,7 @@ afirmacao:
     | condicional
     | durante
     | enquanto
-    | emprime SEMICOLON
+    | imprime SEMICOLON
     ;
 
 op_condicional: EQUAL | MENOR | MAIOR | MENOREQ | MAIOREQ | DENTRO ;
