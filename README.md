@@ -46,20 +46,23 @@ PALAVRA = '"' {qualquer caracter que não seja aspas duplas} '"'
 
 #### Exemplos:
 
+    a->4;
     enquanto(a>7){
         a->a+1;
     }
+    imprime(a);
     
-    
-    durante a->7*2 ate 40/2{
-        se(a>16){
-            b->funcao_soma(a);
-        }
-        senao{
-            b->funcao_soma(a+5);
-        }
-    }
-
     funcao funcao_soma(numero){
         retorna(numero+10);
     }
+    
+    durante c->7*2 ate 40/2{
+        se(c>16){
+            b->funcao_soma(c);
+        }
+        senao{
+            b->funcao_soma(c+5);
+        }
+    }
+    
+    imprime(b);
