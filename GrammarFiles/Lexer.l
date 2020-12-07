@@ -35,7 +35,8 @@ int yyerror( char *, ...);
 "durante"                 { return KEYWORDFOR; }
 "ate"                     { return KEYWORDUNTIL; }
 "funcao"                  { return KEYWORDFUNCTION; }
-"retorna"                  { return KEYWORDRETURN; }
+"retorna"                 { return KEYWORDRETURN; }
+"emprime"                 { return KEYWORDPRINT; }
 
 [a-zA-Z_][a-zA-Z0-9_]*    { return IDENTIFIER; }
 ["][^"]*["]               { return PALAVRA; }

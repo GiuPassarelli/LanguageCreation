@@ -14,7 +14,7 @@ int yyerror(char *s);
 %token OP CP OCB CCB
 %token EOL SEMICOLON COMMA
 %token IDENTIFIER ASSIGN PALAVRA
-%token KEYWORDIF KEYWORDELSE KEYWORDWHILE KEYWORDFOR KEYWORDUNTIL KEYWORDFUNCTION KEYWORDRETURN
+%token KEYWORDIF KEYWORDELSE KEYWORDWHILE KEYWORDFOR KEYWORDUNTIL KEYWORDFUNCTION KEYWORDRETURN KEYWORDPRINT
 
 %%
 
@@ -38,9 +38,11 @@ condicao: exp
     | exp op_condicional exp
     ;
 
+emprime: KEYWORDPRINT OP exp CP
+    | KEYWORDPRINT OP IDENTIFIER CP
+
 afirmacoes: afirmacao
     | afirmacao afirmacoes
-
 
 afirmacao:
     | variable
@@ -48,6 +50,7 @@ afirmacao:
     | condicional
     | durante
     | enquanto
+    | emprime SEMICOLON
     ;
 
 op_condicional: EQUAL | MENOR | MAIOR | MENOREQ | MAIOREQ | DENTRO ;
