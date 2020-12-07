@@ -14,9 +14,11 @@ CONDICIONAL = "se" "(" CONDICAO ")" "{" {AFIRMACAO} "}" [ "senao" "{" {AFIRMACAO
 
 CONDICAO = EXPRESSAO [OPERACAO-CONDICIONAL EXPRESSAO]
 
-AFIRMACAO = VARIAVEL | CHAMADA_FUNCAO ";" | ENQUANTO | DURANTE | CONDICIONAL
+PRINT = "imprime" "(" (EXPRESSAO | IDENTIFICADOR) ")" ";"
 
-OPERACAO-CONDICIONAL = "==" | "maior que" | "menor que" | "maior igual a" | "menor igual a" | "dentro de"
+AFIRMACAO = VARIAVEL | CHAMADA_FUNCAO ";" | ENQUANTO | DURANTE | CONDICIONAL | PRINT
+
+OPERACAO-CONDICIONAL = "==" | "maiorQue" | "menorQue"
 
 ### DEFINIÇÃO DE FUNÇÃO:
 
