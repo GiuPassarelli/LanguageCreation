@@ -1,0 +1,18 @@
+a -> 3;
+b -> 0;
+
+funcao funcao_soma(numero){
+    retorna(numero+10);
+}
+
+durante a->7*2 ate 40/2{
+    se(a maiorQue 16){
+        b->funcao_soma(a);
+    }
+    senao{
+        b->funcao_soma(a+5);
+    }
+}
+
+imprime(a);
+imprime(b menorQue a);
